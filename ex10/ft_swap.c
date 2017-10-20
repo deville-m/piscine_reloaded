@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/20 18:33:37 by mdeville          #+#    #+#             */
-/*   Updated: 2017/10/20 18:38:20 by mdeville         ###   ########.fr       */
+/*   Created: 2017/10/20 18:45:01 by mdeville          #+#    #+#             */
+/*   Updated: 2017/10/20 18:46:17 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
-
-void	ft_print_alphabet(void)
+void	ft_swap(int *a, int *b)
 {
-	char c;
+	int temp;
 
-	c = 'a';
-	while (c <= 'z')
-		ft_putchar(c++);
+	if (a && b)
+	{
+		temp = *b;
+		*b = *a;
+		*a = *b;
+	}
 }

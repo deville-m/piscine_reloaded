@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/20 18:33:37 by mdeville          #+#    #+#             */
-/*   Updated: 2017/10/20 18:38:20 by mdeville         ###   ########.fr       */
+/*   Updated: 2017/10/20 18:38:01 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_putchar(char c);
 
-void	ft_print_alphabet(void)
+void	ft_print_numbers(void)
 {
 	char c;
 
-	c = 'a';
-	while (c <= 'z')
+	c = '0';
+	while (c <= '9')
 		ft_putchar(c++);
 }

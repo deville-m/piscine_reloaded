@@ -1,22 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_ft.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/20 18:33:37 by mdeville          #+#    #+#             */
-/*   Updated: 2017/10/20 18:38:20 by mdeville         ###   ########.fr       */
+/*   Created: 2017/10/20 18:42:59 by mdeville          #+#    #+#             */
+/*   Updated: 2017/10/20 18:44:05 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
-
-void	ft_print_alphabet(void)
+void	ft_ft(int *nbr)
 {
-	char c;
-
-	c = 'a';
-	while (c <= 'z')
-		ft_putchar(c++);
+	if (nbr)
+		*nbr = 42;
 }

@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/20 18:33:37 by mdeville          #+#    #+#             */
-/*   Updated: 2017/10/20 18:38:20 by mdeville         ###   ########.fr       */
+/*   Created: 2017/10/20 18:38:35 by mdeville          #+#    #+#             */
+/*   Updated: 2017/10/20 18:39:30 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
+#include <unistd.h>
 
-void	ft_print_alphabet(void)
+void ft_putchar(char c)
 {
-	char c;
-
-	c = 'a';
-	while (c <= 'z')
-		ft_putchar(c++);
+	write(1, &c, 1);
 }

@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_is_negative.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/20 18:33:37 by mdeville          #+#    #+#             */
-/*   Updated: 2017/10/20 18:38:20 by mdeville         ###   ########.fr       */
+/*   Created: 2017/10/20 18:40:31 by mdeville          #+#    #+#             */
+/*   Updated: 2017/10/20 18:42:21 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_putchar(char c);
 
-void	ft_print_alphabet(void)
+void	ft_is_negative(int n)
 {
-	char c;
-
-	c = 'a';
-	while (c <= 'z')
-		ft_putchar(c++);
+	if (n < 0)
+		ft_putchar('N');
+	else
+		ft_putchar('P');
 }
