@@ -1,23 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/20 18:45:01 by mdeville          #+#    #+#             */
-/*   Updated: 2017/10/21 02:44:30 by mdeville         ###   ########.fr       */
+/*   Created: 2017/10/21 02:11:16 by mdeville          #+#    #+#             */
+/*   Updated: 2017/10/21 02:17:28 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_swap(int *a, int *b)
-{
-	int temp;
+#include <stdlib.h>
 
-	if (a && b)
-	{
-		temp = *b;
-		*b = *a;
-		*a = temp;
-	}
+int	*ft_range(int min, int max)
+{
+	int	*res;
+	int	i;
+	int len;
+
+	if (min >= max)
+		return (NULL);
+
+	len = max - min;
+	res = (int *)malloc(sizeof(int) * len);
+	if (!res)
+		return (NULL);
+
+	i = 0;
+	while (i < len)
+		res[i++] = min + i;
+	return (res);
 }

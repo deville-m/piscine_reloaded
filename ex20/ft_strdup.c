@@ -1,23 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/20 18:45:01 by mdeville          #+#    #+#             */
-/*   Updated: 2017/10/21 02:44:30 by mdeville         ###   ########.fr       */
+/*   Created: 2017/10/21 02:05:21 by mdeville          #+#    #+#             */
+/*   Updated: 2017/10/21 02:10:02 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_swap(int *a, int *b)
-{
-	int temp;
+#include <stdlib.h>
 
-	if (a && b)
+int		ft_strlen(char *str)
+{
+	int i;
+
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
+}
+
+char	*ft_strdup(char *src)
+{
+	char	*res;
+	int		i;
+
+	if (!src)
+		return src;
+
+	res = (char *)malloc(sizeof(char) * ft_strlen(src));
+
+	i = 0;
+	while (src[i])
 	{
-		temp = *b;
-		*b = *a;
-		*a = temp;
+		res[i] = src[i];
+		i++;
 	}
+	res[i] = '\0';
+	return (res);
 }

@@ -1,23 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   ft_point.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/20 18:45:01 by mdeville          #+#    #+#             */
-/*   Updated: 2017/10/21 02:44:30 by mdeville         ###   ########.fr       */
+/*   Created: 2017/10/21 02:20:24 by mdeville          #+#    #+#             */
+/*   Updated: 2017/10/21 02:21:59 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_swap(int *a, int *b)
-{
-	int temp;
+#ifndef FT_POINT_H
 
-	if (a && b)
-	{
-		temp = *b;
-		*b = *a;
-		*a = temp;
-	}
-}
+typedef struct	s_point
+{
+	int			x;
+	int			y;
+}				t_point;
+
+#endif

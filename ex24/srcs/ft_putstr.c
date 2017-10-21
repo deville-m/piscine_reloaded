@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/20 18:45:01 by mdeville          #+#    #+#             */
-/*   Updated: 2017/10/21 02:44:30 by mdeville         ###   ########.fr       */
+/*   Created: 2017/10/21 01:08:59 by mdeville          #+#    #+#             */
+/*   Updated: 2017/10/21 02:43:11 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_swap(int *a, int *b)
-{
-	int temp;
+#include "ft_putchar.h"
 
-	if (a && b)
-	{
-		temp = *b;
-		*b = *a;
-		*a = temp;
-	}
+void	ft_putstr(char *str)
+{
+	if (!str)
+		return ;
+
+	while (*str)
+		ft_putchar(*str++);
 }

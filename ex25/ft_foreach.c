@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   ft_foreach.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/20 18:45:01 by mdeville          #+#    #+#             */
-/*   Updated: 2017/10/21 02:44:30 by mdeville         ###   ########.fr       */
+/*   Created: 2017/10/21 02:46:16 by mdeville          #+#    #+#             */
+/*   Updated: 2017/10/21 02:50:25 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_swap(int *a, int *b)
+void	ft_foreach(int *tab, int length, void (*f)(int))
 {
-	int temp;
+	int i;
 
-	if (a && b)
-	{
-		temp = *b;
-		*b = *a;
-		*a = temp;
-	}
+	if (!tab || !f)
+		return ;
+
+	i = 0;
+	while (i < length)
+		(*f)(tab[i++]);
 }

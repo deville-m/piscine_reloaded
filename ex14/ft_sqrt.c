@@ -1,23 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/20 18:45:01 by mdeville          #+#    #+#             */
-/*   Updated: 2017/10/21 02:44:30 by mdeville         ###   ########.fr       */
+/*   Created: 2017/10/21 00:51:59 by mdeville          #+#    #+#             */
+/*   Updated: 2017/10/21 01:07:41 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_swap(int *a, int *b)
+int		ft_sqrt(int nb)
 {
-	int temp;
+	int i;
+	int half;
 
-	if (a && b)
+	if (nb == 1)
+		return (1);
+	if (nb < 4)
+		return (0);
+
+	half = nb / 2;
+	i = 2;
+	while (i <= half && i <= 46340)
 	{
-		temp = *b;
-		*b = *a;
-		*a = temp;
+		if (i * i == nb)
+			return (i);
+		i++;
 	}
+	return (0);
 }
