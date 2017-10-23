@@ -1,20 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   test_ft_print_alphabet.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/20 18:47:02 by mdeville          #+#    #+#             */
-/*   Updated: 2017/10/23 11:02:15 by mdeville         ###   ########.fr       */
+/*   Created: 2017/10/23 13:29:43 by mdeville          #+#    #+#             */
+/*   Updated: 2017/10/23 14:09:38 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+#include <criterion/criterion.h>
+#include <stdio.h>
+
+void    ft_print_alphabet(void);
+
+Test(test_ft_print_alphabet, output)
 {
-	if (div && mod && b)
-	{
-		*div = a / b;
-		*mod = a % b;
-	}
+    FILE *test;
+    
+    test = freopen("test", "w+", 1);
+    if (test)
+    {
+        ft_print_alphabet();
+        rewind(test);
+        cr_assert_file_contents_eq_str(test, "abcdefghijklmnopqrstuvwxyz");
+        fclose(test);
+        remove("test");
+    }
 }

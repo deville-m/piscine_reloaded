@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   test_ft_sqrt.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/20 18:47:02 by mdeville          #+#    #+#             */
-/*   Updated: 2017/10/23 11:02:15 by mdeville         ###   ########.fr       */
+/*   Created: 2017/10/23 12:47:24 by mdeville          #+#    #+#             */
+/*   Updated: 2017/10/23 12:55:40 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+#include <criterion/criterion.h>
+
+int     ft_sqrt(int nb);
+
+Test(test_ft_sqrt, value)
 {
-	if (div && mod && b)
-	{
-		*div = a / b;
-		*mod = a % b;
-	}
+    cr_assert_eq(11, ft_sqrt(121));
+    cr_assert_eq(0, ft_sqrt(-1));
+    cr_assert_eq(0, ft_sqrt(0));
+    cr_assert_eq(1, ft_sqrt(1));
+    cr_assert_eq(0, ft_sqrt(2147483647));
 }
