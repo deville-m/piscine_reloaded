@@ -1,41 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_ft_div_mod.c                                  :+:      :+:    :+:   */
+/*   test_ft_strdup.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/23 10:50:45 by mdeville          #+#    #+#             */
-/*   Updated: 2017/10/23 16:59:03 by mdeville         ###   ########.fr       */
+/*   Created: 2017/10/23 18:59:40 by mdeville          #+#    #+#             */
+/*   Updated: 2017/10/23 19:07:59 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <criterion/criterion.h>
+#include <stdlib.h>
 
-void	ft_div_mod(int a, int b, int *div, int *mod);
+char	*ft_strdup(char *src);
 
-Test(test_ft_div_mod, normal)
+Test(test_ft_strdup, normal)
 {
-	int div;
-	int mod;
+	char *a;
+	char *b;
 
-	ft_div_mod(42, 2, &div, &mod);
-	cr_assert_eq(21, div, "a: %d", div);
-	cr_assert_eq(0, mod, "b: %d", mod);
-}
-
-Test(test_ft_div_mod, division_by_zero)
-{
-	int div;
-	int mod;
-
-	ft_div_mod(42, 0, &div, &mod);
-}
-
-Test(test_ft_div_mod, null_pointer)
-{
-	int test;
-
-	ft_div_mod(42, 2, NULL, &test);
-	ft_div_mod(42, 2, &test, NULL);
+	a = ft_strdup("Salut");
+	b = ft_strdup("");
+	cr_assert_str_eq(a, "Salut");
+	cr_assert_str_eq(b, "");
+	free(a);
+	free(b);
 }

@@ -1,19 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_ft_print_alphabet.c                           :+:      :+:    :+:   */
+/*   test_ft_putstr.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/23 13:29:43 by mdeville          #+#    #+#             */
-/*   Updated: 2017/10/23 16:40:11 by mdeville         ###   ########.fr       */
+/*   Created: 2017/10/23 17:01:33 by mdeville          #+#    #+#             */
+/*   Updated: 2017/10/23 18:01:32 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void    ft_print_alphabet(void);
+#include <stdio.h>
 
-int main()
+void	ft_putstr(char *str);
+
+int main(int argc, char **argv)
 {
-	ft_print_alphabet();
+	int i;
+
+	i = 1;
+	while (i < argc)
+	{
+		printf("String no.%d:\nResult printf=%s\n", i, argv[i]);
+
+		ft_putstr("Result ft_putstr=");
+		ft_putstr(argv[i++]);
+
+		printf("\n\n");
+	}
 	return (0);
 }

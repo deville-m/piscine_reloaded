@@ -1,41 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_ft_div_mod.c                                  :+:      :+:    :+:   */
+/*   test_ft_strcmp.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/23 10:50:45 by mdeville          #+#    #+#             */
-/*   Updated: 2017/10/23 16:59:03 by mdeville         ###   ########.fr       */
+/*   Created: 2017/10/23 18:22:02 by mdeville          #+#    #+#             */
+/*   Updated: 2017/10/23 18:48:07 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <criterion/criterion.h>
+#include <string.h>
 
-void	ft_div_mod(int a, int b, int *div, int *mod);
+int		ft_strcmp(char *s1, char *s2);
 
-Test(test_ft_div_mod, normal)
+Test(test_ft_strcmp, value)
 {
-	int div;
-	int mod;
-
-	ft_div_mod(42, 2, &div, &mod);
-	cr_assert_eq(21, div, "a: %d", div);
-	cr_assert_eq(0, mod, "b: %d", mod);
-}
-
-Test(test_ft_div_mod, division_by_zero)
-{
-	int div;
-	int mod;
-
-	ft_div_mod(42, 0, &div, &mod);
-}
-
-Test(test_ft_div_mod, null_pointer)
-{
-	int test;
-
-	ft_div_mod(42, 2, NULL, &test);
-	ft_div_mod(42, 2, &test, NULL);
+	cr_assert(ft_strcmp("", "") == 0);
+	cr_assert(ft_strcmp("Salut", "Salut") == 0);
+	cr_assert(ft_strcmp("Slt", "") > 0);
+	cr_assert(ft_strcmp("", "Slt") < 0);
+	cr_assert(ft_strcmp("Bonjour", "Bonjoua") > 0);
+	cr_assert(ft_strcmp("123", "abc") < 0);
 }
