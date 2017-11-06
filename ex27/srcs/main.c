@@ -6,7 +6,7 @@
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/21 03:04:09 by mdeville          #+#    #+#             */
-/*   Updated: 2017/10/21 03:26:51 by mdeville         ###   ########.fr       */
+/*   Updated: 2017/11/06 14:56:36 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include <fcntl.h>
 #include "ft_putchar.h"
 
-int main(int argc, char **argv)
+int		main(int argc, char **argv)
 {
 	int		fd;
 	char	c;
@@ -37,7 +37,6 @@ int main(int argc, char **argv)
 		write(2, "Error while opening file\n", 25);
 		return (0);
 	}
-
 	while (read(fd, &c, 1) > 0)
 		ft_putchar(c);
 	return (0);

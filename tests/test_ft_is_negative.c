@@ -1,26 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_count_if.c                                      :+:      :+:    :+:   */
+/*   test_ft_is_negative.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mdeville <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/21 02:51:22 by mdeville          #+#    #+#             */
-/*   Updated: 2017/11/06 14:57:14 by mdeville         ###   ########.fr       */
+/*   Created: 2017/11/06 14:31:09 by mdeville          #+#    #+#             */
+/*   Updated: 2017/11/06 14:32:29 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_count_if(char **tab, int (*f)(char *))
-{
-	int cpt;
+void	ft_is_negative(int);
 
-	if (!tab)
-		return (0);
-	cpt = 0;
-	while (*tab)
-	{
-		if ((*f)(*tab++))
-			cpt++;
-	}
-	return (cpt);
+int main()
+{
+	ft_is_negative(42);
+	ft_is_negative(0);
+	ft_is_negative(-1);
+	return (0);
 }

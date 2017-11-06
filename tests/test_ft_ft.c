@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_count_if.c                                      :+:      :+:    :+:   */
+/*   test_ft_ft.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/21 02:51:22 by mdeville          #+#    #+#             */
-/*   Updated: 2017/11/06 14:57:14 by mdeville         ###   ########.fr       */
+/*   Created: 2017/10/21 15:51:31 by mdeville          #+#    #+#             */
+/*   Updated: 2017/11/06 14:40:14 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_count_if(char **tab, int (*f)(char *))
-{
-	int cpt;
+#include <criterion/criterion.h>
 
-	if (!tab)
-		return (0);
-	cpt = 0;
-	while (*tab)
-	{
-		if ((*f)(*tab++))
-			cpt++;
-	}
-	return (cpt);
+void	ft_ft(int *nb);
+
+Test(test_ft_ft, value)
+{
+	int test_value;
+
+	ft_ft(&test_value);
+	cr_assert_eq(test_value, 42, "nb: %d", 42);
 }

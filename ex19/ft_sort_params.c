@@ -6,7 +6,7 @@
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/21 01:25:32 by mdeville          #+#    #+#             */
-/*   Updated: 2017/10/21 02:04:28 by mdeville         ###   ########.fr       */
+/*   Updated: 2017/11/06 14:58:14 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ void	ft_putstr(char *str)
 {
 	if (!str)
 		return ;
-
 	while (*str)
 		ft_putchar(*str++);
 }
@@ -73,7 +72,6 @@ int		main(int argc, char **argv)
 {
 	if (argc <= 1)
 		return (0);
-
 	ft_sort_params(argc - 1, argv + 1);
 	ft_print_params(argc, argv);
 	return (0);

@@ -6,7 +6,7 @@
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/21 00:51:59 by mdeville          #+#    #+#             */
-/*   Updated: 2017/10/21 01:07:41 by mdeville         ###   ########.fr       */
+/*   Updated: 2017/11/06 14:54:25 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ int		ft_sqrt(int nb)
 		return (1);
 	if (nb < 4)
 		return (0);
-
 	half = nb / 2;
 	i = 2;
 	while (i <= half && i <= 46340)

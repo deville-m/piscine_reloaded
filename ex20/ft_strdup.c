@@ -6,7 +6,7 @@
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/21 02:05:21 by mdeville          #+#    #+#             */
-/*   Updated: 2017/10/21 02:10:02 by mdeville         ###   ########.fr       */
+/*   Updated: 2017/11/06 15:00:50 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,8 @@ char	*ft_strdup(char *src)
 	int		i;
 
 	if (!src)
-		return src;
-
+		return (src);
 	res = (char *)malloc(sizeof(char) * ft_strlen(src));
-
 	i = 0;
 	while (src[i])
 	{

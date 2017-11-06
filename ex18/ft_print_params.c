@@ -6,7 +6,7 @@
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/21 01:20:26 by mdeville          #+#    #+#             */
-/*   Updated: 2017/10/21 01:24:44 by mdeville         ###   ########.fr       */
+/*   Updated: 2017/11/06 14:54:52 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ void	ft_putstr(char *str)
 {
 	if (!str)
 		return ;
-
 	while (*str)
 		ft_putchar(*str++);
 }

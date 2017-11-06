@@ -6,11 +6,12 @@
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/21 02:18:28 by mdeville          #+#    #+#             */
-/*   Updated: 2017/10/21 02:19:53 by mdeville         ###   ########.fr       */
+/*   Updated: 2017/11/06 15:01:53 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_ABS_H
+# define FT_ABS_H
 
 # define ABS(Value) (Value < 0) ? -Value : Value
 

@@ -1,23 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_ft_ft.c                                       :+:      :+:    :+:   */
+/*   test_ft_print_numbers.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mdeville <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/21 15:51:31 by mdeville          #+#    #+#             */
-/*   Updated: 2017/10/21 17:27:41 by mdeville         ###   ########.fr       */
+/*   Created: 2017/11/06 14:28:09 by mdeville          #+#    #+#             */
+/*   Updated: 2017/11/06 14:29:12 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <criterion/criterion.h>
+void	ft_print_numbers(void);
 
-void	ft_ft(int *nb);
-
-Test(test_ft_ft, value)
+int main()
 {
-	int test_value;
-
-	ft_ft(&test_value);
-	cr_assert_eq(test_value, 42, "nb: %d", 42);
+	ft_print_numbers();
+	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/21 02:46:16 by mdeville          #+#    #+#             */
-/*   Updated: 2017/10/21 02:50:25 by mdeville         ###   ########.fr       */
+/*   Updated: 2017/11/06 14:55:09 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ void	ft_foreach(int *tab, int length, void (*f)(int))
 
 	if (!tab || !f)
 		return ;
-
 	i = 0;
 	while (i < length)
 		(*f)(tab[i++]);
